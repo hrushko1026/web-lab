@@ -2,28 +2,38 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Резюме - HRUSHKO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4 - HRUSHKO</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>HRUSHKO</h1>
-        <p>Програміст | Дизайнер одягу | Спеціаліст з кібербезпеки</p>
+        <h1>Робота із JavaScript</h1>
+        <button id="theme-toggle">Перемкнути тему (День/Ніч)</button>
     </header>
-    <hr>
-    <section>
-        <h2>Про себе</h2>
-        <p>Я Maksym, студент ІТ. Маю досвід роботи з Python, PHP та SQL. Захоплююся тхеквондо та розробкою одягу для клубу "Taekwondo Spinner Lviv".</p>
-    </section>
-    <section>
-        <h2>Навички та захоплення</h2>
-        <ul>
-            <li>Програмування: Python, PHP, Assembler, C++</li>
-            <li>ОС: Arch Linux (Hyprland)</li>
-            <li>Захоплення: Тхеквондо, Dota 2</li>
-        </ul>
-    </section>
-    <footer>
-        <p><small>Лабораторна робота №2. 2026 рік.</small></p>
-    </footer>
+
+    <main>
+        <section>
+            <h2>Коментарі попередніх роботодавців</h2>
+            <div id="comments-container"></div>
+        </section>
+    </main>
+
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <h3>Форма зворотнього зв'язку</h3>
+            <form action="https://formspree.io/f/mkoyondp" method="POST">
+                <input type="text" name="name" placeholder="Ваше ім'я" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <input type="tel" name="phone" placeholder="Номер телефону">
+                <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
