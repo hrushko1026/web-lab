@@ -1,51 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Хакерський/Термінальний стиль */
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    transition: background-color 0.5s, color 0.5s;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d1117; /* Дуже темний фон */
+    color: #58a6ff; /* Неоновий синій текст */
+    display: flex;
+    justify-content: center;
+    padding: 40px;
 }
 
+/* Якщо включиться нічна тема з JS */
 .dark-theme {
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background-color: #000000;
+    color: #00ff00;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
+.resume-wrapper {
+    display: flex;
+    background-color: #161b22;
+    width: 900px;
+    min-height: 1100px;
+    box-shadow: 0 0 25px rgba(88, 166, 255, 0.3); /* Неонова тінь */
+    border: 2px solid #58a6ff; /* Рамка навколо всього сайту */
+    border-radius: 8px;
 }
 
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    color: black;
+.left-column {
+    flex: 2;
+    padding: 50px;
+    border-right: 2px dashed #30363d; /* Пунктирний розділювач */
 }
 
-.modal-content input, .modal-content textarea {
-    width: 90%;
-    margin-bottom: 10px;
-    padding: 8px;
+.right-sidebar {
+    flex: 1;
+    background-color: #0d1117;
+    padding: 50px 25px;
 }
 
-footer {
-    margin-top: 50px;
-    padding: 10px;
-    border-top: 1px solid #ccc;
-    font-size: 0.8em;
-}
-
+/* Світиться зеленим */
 h1.name {
     font-size: 42px;
-    color: #e67e22; /* Оранжевий колір */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Додана тінь */
-    margin-bottom: 5px;
-    letter-spacing: 2px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Неоновий рожевий/червоний для підзаголовків */
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ff7b72;
+    border-bottom: 2px solid #ff7b72;
+    margin: 25px 0 15px 0;
+    padding-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #8b949e;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    background: #21262d;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-left: 5px solid #00ff00;
+    color: #c9d1d9;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+/* Анімація при наведенні */
+.skills-list li:hover {
+    background-color: #00ff00;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff00;
+    cursor: crosshair;
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+    border-bottom: 1px dashed #00ff00;
 }
